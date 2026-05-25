@@ -8,10 +8,10 @@ import { Footer } from "@/components/footer";
 import Link from "next/link";
 
 const heroImages = [
-  "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1920&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1920&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1920&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1920&auto=format&fit=crop",
+  "/image1.webp",
+  "/image2.webp",
+  "/image3.webp",
+  "/image4.webp",
 ];
 
 export default function HomePage() {
@@ -57,46 +57,46 @@ export default function HomePage() {
         {/* Hero Content */}
         <div className="relative z-10 flex h-full items-center justify-center">
           <div className="mx-auto max-w-5xl px-4 text-center text-white">
-            <div className="mb-5 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-md">
+            <div className="mb-3 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm backdrop-blur-md">
               🌱 Smart Agriculture Powered by AI
             </div>
 
-            <h1 className="animate-fadeIn text-5xl font-extrabold leading-tight md:text-7xl">
+            <h1 className="animate-fadeIn text-3xl font-extrabold leading-tight md:text-5xl">
               AI Driven Smart Farming
               <span className="block bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">
                 and Advisory System
               </span>
             </h1>
 
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-green-100 md:text-xl">
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-green-100 md:text-lg">
               Intellicrop combines artificial intelligence with real-time
               environmental data to provide actionable insights for optimal crop
               selection, irrigation planning, and fertilization strategies.
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               <a
                 href="#dashboard"
-                className="rounded-xl bg-amber-500 px-8 py-4 text-lg font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-amber-600"
+                className="rounded-xl bg-amber-500 px-6 py-2 text-base font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-amber-600"
               >
                 Explore Dashboard
               </a>
 
               <a
                 href="#features"
-                className="rounded-xl border border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold backdrop-blur-md transition-all duration-300 hover:bg-white/20"
+                className="rounded-xl border border-white/30 bg-white/10 px-6 py-2 text-base font-semibold backdrop-blur-md transition-all duration-300 hover:bg-white/20"
               >
                 Learn More
               </a>
             </div>
 
             {/* Dots Indicator */}
-            <div className="mt-10 flex justify-center gap-3">
+            <div className="mt-6 flex justify-center gap-2">
               {heroImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImage(index)}
-                  className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                  className={`h-2 w-2 rounded-full transition-all duration-300 ${
                     currentImage === index
                       ? "w-10 bg-amber-400"
                       : "bg-white/50 hover:bg-white"
@@ -112,29 +112,24 @@ export default function HomePage() {
       </section>
 
       {/* FEATURES */}
-      <section id="features" className="bg-white py-16">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-10 text-center text-4xl font-bold text-green-900">
-            How Intellicrop Works
-          </h2>
-
-          <section id="features" className="bg-white py-20">
+      <section id="features" className="bg-white py-12">
   <div className="mx-auto max-w-7xl px-4">
+    
     {/* Heading */}
-    <div className="mb-16 text-center">
-      <h2 className="text-5xl font-extrabold text-green-900">
+    <div className="mb-10 text-center">
+      <h2 className="text-3xl font-extrabold text-green-900">
         How Intellicrop Works
       </h2>
 
-      <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
+      <p className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-slate-600">
         Intellicrop uses AI technology, environmental monitoring, and smart
         analytics to help farmers improve productivity, reduce waste, and make
         data-driven farming decisions.
       </p>
     </div>
 
-    {/* Vertical Large Cards */}
-    <div className="space-y-8">
+    {/* 2 Column Grid */}
+    <div className="grid gap-6 lg:grid-cols-2">
       {[
         {
           icon: "🌤️",
@@ -186,43 +181,47 @@ export default function HomePage() {
       ].map((item, index) => (
         <div
           key={index}
-          className="group overflow-hidden rounded-3xl border border-green-100 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+          className="group h-full overflow-hidden rounded-3xl border border-green-100 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
         >
-          <div className="flex flex-col lg:flex-row">
+          <div className="flex h-full flex-col lg:flex-row">
+            
             {/* Left Side */}
-            <div className="flex items-center justify-center bg-gradient-to-br from-green-700 to-green-500 p-10 lg:w-72">
+            <div className="flex items-center justify-center bg-gradient-to-br from-green-700 to-green-500 p-6 lg:w-56">
               <div className="text-center text-white">
-                <div className="text-7xl transition-transform duration-500 group-hover:scale-110">
+                <div className="text-5xl transition-transform duration-500 group-hover:scale-110">
                   {item.icon}
                 </div>
 
-                <h3 className="mt-5 text-3xl font-bold">
+                <h3 className="mt-3 text-xl font-bold">
                   {item.title}
                 </h3>
               </div>
             </div>
 
             {/* Right Side */}
-            <div className="flex-1 p-8 lg:p-10">
-              <p className="text-lg leading-relaxed text-slate-600">
-                {item.text}
-              </p>
+            <div className="flex flex-1 flex-col justify-between p-5 lg:p-6">
+              
+              <div>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  {item.text}
+                </p>
 
-              {/* Feature Points */}
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
-                {item.features.map((feature, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-3 rounded-xl bg-green-50 px-5 py-4 text-slate-700 transition-all duration-300 hover:bg-green-100"
-                  >
-                    <span className="text-lg text-green-600">✔</span>
-                    <span>{feature}</span>
-                  </div>
-                ))}
+                {/* Feature Points */}
+                <div className="mt-4 grid gap-2 md:grid-cols-2">
+                  {item.features.map((feature, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 rounded-lg bg-green-50 px-3 py-2 text-xs text-slate-700 transition-all duration-300 hover:bg-green-100"
+                    >
+                      <span className="text-sm text-green-600">✔</span>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Button */}
-              <button className="mt-8 rounded-xl bg-green-700 px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-green-800 hover:shadow-lg">
+              <button className="mt-5 w-fit rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-green-800 hover:shadow-lg">
                 Learn More
               </button>
             </div>
@@ -232,48 +231,45 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-        </div>
-      </section>
-
       {/* DASHBOARD */}
       <DashboardSection />
 
       {/* CHATBOT */}
       <section id="chatbot" className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-8 text-center text-4xl font-bold text-green-900">
-            Ask Our AI Agricultural Assistant
-          </h2>
+        <h2 className="mb-6 text-center text-3xl font-bold text-green-900">
+          Ask Our AI Agricultural Assistant
+        </h2>
 
-          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-xl">
+        <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 shadow-xl">
             <ChatAssistant />
           </div>
         </div>
       </section>
 
       {/* TIPS */}
-<section className="relative overflow-hidden bg-gradient-to-b from-green-50 via-white to-green-100 py-24">
+<section className="relative overflow-hidden bg-gradient-to-b from-green-50 via-white to-green-100 py-16">
   {/* Background Effects */}
   <div className="absolute inset-0">
-    <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-green-300/20 blur-3xl" />
+    <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-green-300/20 blur-3xl" />
 
-    <div className="absolute bottom-0 right-0 h-[450px] w-[450px] rounded-full bg-emerald-300/20 blur-3xl" />
+    <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-emerald-300/20 blur-3xl" />
 
     <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
   </div>
 
   <div className="relative mx-auto max-w-7xl px-4">
     {/* Heading */}
-    <div className="mb-16 text-center">
-      <div className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-white px-5 py-2 shadow-sm">
+    <div className="mb-10 text-center">
+      <div className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-white px-3 py-1 text-sm shadow-sm">
         🌱 Smart Agriculture Tips
       </div>
 
-      <h2 className="mt-6 text-5xl font-extrabold text-green-950">
+      <h2 className="mt-4 text-3xl font-extrabold text-green-950">
         Essential Farming Tips
       </h2>
 
-      <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
+      <p className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-slate-600">
         Improve crop productivity, reduce soil damage, and enhance farming
         efficiency with these smart agricultural practices powered by
         sustainable farming techniques.
@@ -281,7 +277,7 @@ export default function HomePage() {
     </div>
 
     {/* Tips Cards */}
-    <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {[
         {
           icon: "🌅",
@@ -327,26 +323,26 @@ export default function HomePage() {
       ].map((tip, index) => (
         <div
           key={index}
-          className="group relative overflow-hidden rounded-[28px] border border-white/40 bg-white/80 p-8 shadow-xl backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+          className="group relative overflow-hidden rounded-[24px] border border-white/40 bg-white/80 p-4 shadow-xl backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
         >
           {/* Glow Effect */}
           <div
-            className={`absolute right-0 top-0 h-40 w-40 rounded-full bg-gradient-to-br ${tip.color} opacity-10 blur-3xl transition-all duration-500 group-hover:scale-150`}
+            className={`absolute right-0 top-0 h-32 w-32 rounded-full bg-gradient-to-br ${tip.color} opacity-10 blur-3xl transition-all duration-500 group-hover:scale-150`}
           />
 
           {/* Icon */}
           <div
-            className={`inline-flex rounded-3xl bg-gradient-to-r ${tip.color} p-5 text-5xl text-white shadow-lg`}
+            className={`inline-flex rounded-2xl bg-gradient-to-r ${tip.color} p-3 text-3xl text-white shadow-lg`}
           >
             {tip.icon}
           </div>
 
           {/* Content */}
-          <h3 className="mt-6 text-2xl font-bold text-green-950">
+          <h3 className="mt-3 text-lg font-bold text-green-950">
             {tip.title}
           </h3>
 
-          <p className="mt-4 leading-relaxed text-slate-600">
+          <p className="mt-2 text-sm leading-relaxed text-slate-600">
             {tip.text}
           </p>
 
@@ -359,19 +355,19 @@ export default function HomePage() {
     </div>
 
     {/* Bottom CTA */}
-    <div className="mt-20 text-center">
-      <div className="inline-block rounded-[32px] border border-white/30 bg-white/70 px-10 py-8 shadow-2xl backdrop-blur-xl">
-        <h3 className="text-3xl font-bold text-green-950">
+    <div className="mt-12 text-center">
+      <div className="inline-block rounded-[28px] border border-white/30 bg-white/70 px-6 py-5 shadow-2xl backdrop-blur-xl">
+        <h3 className="text-2xl font-bold text-green-950">
           Ready to Modernize Your Farming?
         </h3>
 
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+        <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-600">
           Use Intellicrop AI to make smarter agricultural decisions with
           weather analytics, crop prediction, and intelligent farming guidance.
         </p>
 
         <Link href="/smart-farming">
-          <button className="mt-8 rounded-2xl bg-gradient-to-r from-green-700 to-emerald-500 px-8 py-4 text-lg font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <button className="mt-4 rounded-xl bg-gradient-to-r from-green-700 to-emerald-500 px-5 py-2 text-base font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             🚀 Explore Smart Farming
           </button>
         </Link>
